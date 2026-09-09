@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="torneo e-sports liceo, inscripciones videojuegos chile, torneo gaming estudiantil, ligas escolares">
+    <meta name="description" content="Inscripción de equipos para el torneo escolar de e-sports.">
+    <title>Inscripciones - Torneo E-Sports</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="servicios.html">ARENA<span>ESPORTS</span></a>
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Inscripciones</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="finanzas.html">Precios</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="page-intro services-intro">
+            <p class="eyebrow">Torneo 2026 / Registro abierto</p>
+            <h1>Inscripción de Equipos</h1>
+            <p class="intro-copy">Registra tres integrantes y asegura tu lugar en la competencia.</p>
+        </section>
+
+        <section class="registration-layout" aria-labelledby="registro-title">
+            <form id="form-inscripcion" class="registration-form">
+                <div class="section-heading">
+                    <span class="section-index">01 / REGISTRO</span>
+                    <h2 id="registro-title">Datos del equipo</h2>
+                </div>
+                <label for="nombreEquipo">Nombre del equipo</label>
+                <input id="nombreEquipo" name="nombreEquipo" type="text" autocomplete="organization" placeholder="Ej. Los Cometas">
+
+                <div class="members-heading">Integrantes <span>3 jugadores</span></div>
+                <label for="integrante1">Jugador 01</label>
+                <input id="integrante1" name="integrante1" type="text" autocomplete="name" placeholder="Nombre completo">
+                <label for="integrante2">Jugador 02</label>
+                <input id="integrante2" name="integrante2" type="text" autocomplete="name" placeholder="Nombre completo">
+                <label for="integrante3">Jugador 03</label>
+                <input id="integrante3" name="integrante3" type="text" autocomplete="name" placeholder="Nombre completo">
+
+                <div id="mensaje-error" class="form-message" role="alert" aria-live="polite"></div>
+                <button type="submit">Inscribir equipo <span aria-hidden="true">↗</span></button>
+            </form>
+
+            <section id="lista-equipos" class="teams-panel" aria-live="polite">
+                <div class="empty-state">
+                    <span class="panel-number">02</span>
+                    <h2>Equipos inscritos</h2>
+                    <p>Los registros aparecerán aquí después de completar el formulario.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">Arena E-Sports <span>·</span> Competencia con respeto</footer>
+</body>
+</html>

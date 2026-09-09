@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="torneo e-sports liceo, inscripciones videojuegos chile, torneo gaming estudiantil, ligas escolares">
+    <meta name="description" content="Contacta al equipo organizador del torneo escolar de e-sports.">
+    <title>Contacto - Torneo E-Sports</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="site-title"><a class="brand" href="index.html">Liga Estudiantil <span>de E-Sports</span></a></h1>
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Inscripciones</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="finanzas.html">Precios</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Estamos para ayudarte</p>
+            <h2 class="home-intro-heading">Ponte en<br><em>contacto.</em></h2>
+            <p class="intro-copy">¿Tienes dudas sobre el torneo? Escríbenos y te responderemos pronto.</p>
+        </section>
+
+        <section class="contact-form" aria-labelledby="contacto-title">
+            <div class="section-heading">
+                <span class="section-index">01 / MENSAJE</span>
+                <h2 id="contacto-title">Datos de contacto</h2>
+            </div>
+            <form id="form-contacto" novalidate>
+                <label for="nombreCapitan">Nombre del Capitán</label>
+                <input id="nombreCapitan" name="nombreCapitan" type="text" autocomplete="name" placeholder="Nombre completo">
+
+                <label for="correoElectronico">Correo Electrónico</label>
+                <input id="correoElectronico" name="correoElectronico" type="email" autocomplete="email" placeholder="capitan@ejemplo.cl">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta"></textarea>
+
+                <div id="mensaje-contacto" class="contact-message" role="status" aria-live="polite"></div>
+                <button type="submit">Enviar mensaje <span aria-hidden="true">↗</span></button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">Arena E-Sports <span>·</span> Competencia con respeto</footer>
+
+    <script>
+        document.getElementById("form-contacto").addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            const nombre = document.getElementById("nombreCapitan").value.trim();
+            const correo = document.getElementById("correoElectronico").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
+            const respuesta = document.getElementById("mensaje-contacto");
+
+            respuesta.className = "contact-message";
+
+            if (!nombre || !correo || !mensaje) {
+                respuesta.textContent = "Error: todos los campos son obligatorios.";
+                respuesta.classList.add("error");
+                return;
+            }
+
+            respuesta.textContent = "Mensaje enviado correctamente. Gracias por contactarnos.";
+            respuesta.classList.add("success");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
